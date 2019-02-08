@@ -6,10 +6,6 @@ You are here because you already did Le Wagon FullStack and purchased a new comp
 xcode-select --install
 ```
 
-## Sublime Text 3
-
-[Download](http://www.sublimetext.com/3) and install it. Package Control / Config is now automatic at step "Dotfiles" below.
-
 ## Homebrew
 
 ```bash
@@ -24,6 +20,16 @@ install_or_upgrade "imagemagick"
 install_or_upgrade "jq"
 install_or_upgrade "openssl"
 ```
+
+## Softwares
+
+```bash
+brew cask install google-chrome firefox sublime-text slack sketch 
+```
+
+## Sublime Text 
+
+Package Control / Config is now automatic at step "Dotfiles" below.
 
 ## Oh-my-zsh
 
@@ -80,6 +86,8 @@ ruby -v
 gem install rake bundler rspec rubocop pry pry-byebug hub colored octokit
 ```
 
+(`⌘` + `Q`) your terminal and restart it. Check your ruby version with:
+
 Check our rails version with:
 
 ```bash
@@ -102,3 +110,14 @@ brew install redis
 brew services start redis
 ```
 
+## Yarn 
+
+```bash
+brew install yarn
+```
+
+## Heroku 
+
+```bash
+brew tap heroku/brew && brew install heroku
+```

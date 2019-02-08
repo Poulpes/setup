@@ -96,7 +96,7 @@ def check_all
     if editor.match(/subl/i)
       [ true, "Sublime Text is your default git editor"]
     else
-      [ false, "Ask a teacher to check your ~/.gitconfig editor setup. Right now, it's `#{editor.chomp}`"]
+      [ false, "Ask us to check your ~/.gitconfig editor setup. Right now, it's `#{editor.chomp}`"]
     end
   end
   check("ruby gems") do
@@ -111,11 +111,10 @@ end
 def outro
   if $all_good
     puts ""
-    puts "🚀  Awesome! Your laptop is now ready for 9 weeks of hard work :)".green
-    puts "Now it's time to onboard on the Alumni platform 👉  kitt.lewagon.com/onboarding"
+    puts "🚀  Awesome! Your laptop is now ready to work :)".green
   else
     puts ""
-    puts "😥  Bummer! Something's wrong, if you're stuck, ask a teacher.".red
+    puts "😥  Bummer! Something's wrong, if you're stuck, ask us.".red
   end
 end
 

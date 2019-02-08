@@ -1,8 +1,8 @@
 # Setup instructions
 
-The following instructions will help you to get ready for [Le Wagon](http://www.lewagon.org) fullstack bootcamp:
+The following instructions will help you to get ready to work @ [Poulpe](http://www.poulpe.co):
 
-- Grab a text editor, where you'll spend your day and nights
+- Grab a text editor
 - Install a package manager
 - Pimp your Terminal
 - Setup git and GitHub
@@ -11,11 +11,8 @@ The following instructions will help you to get ready for [Le Wagon](http://www.
 
 ## Command Line Tools
 
-Open the Terminal (click the magnifying glass icon in the top right corner of your screen and type `Terminal`):
 
-![](images/open-terminal.png)
-
-Copy-paste the following command in the terminal and hit Enter.
+Open the Terminal:
 
 ```bash
 xcode-select --install
@@ -31,14 +28,10 @@ Otherwise, it will open a window asking you if you want to install some software
 
 ![](images/xcode-select-install.png)
 
-While it's downloading, you can go on with configuring your GitHub account, but **stop** before Homebrew. You'll need the command line tools installed for that step.
-
 
 ## GitHub account
 
 Have you signed up to GitHub? If not, [do it right away](https://github.com/join).
-
-:point_right: **[Upload a picture](https://github.com/settings/profile)** and put your name correctly on your GitHub account. This is important as we'll use an internal dashboard with your avatars. Please do it **now**.
 
 
 ## Homebrew
@@ -78,17 +71,11 @@ install_or_upgrade "imagemagick"
 install_or_upgrade "jq"
 install_or_upgrade "openssl"
 ```
+## Softwares
 
-
-## Sublime Text 3 - Your text editor
-
-A text editor is one of the most important tools of a developer. Go to [this page](http://www.sublimetext.com/3) and download **Sublime Text 3** for OS X. Install it (double click the downloaded file and drag & drop the app **into** the `Applications` folder, **don't skip this**). If you had Sublime Text 2 installed before, please uninstall it (by dragging/dropping it to the Trash).
-
-Sublime Text is free without any time limitation but a popup will appear every ten saves to remind you there is a license to buy. You can hit `Esc` when this happens, but feel free to buy Sublime Text if you really like this one (there are alternatives).
-
-Again, make sure that Sublime Text is there, not in the disk image you downloaded. To make sure it's correct, once Sublime Text is installed, unmount the "Sublime Text 3" disk in the left panel of Finder. Finder will complain if something went wrong. Ask a teacher.
-
-
+```bash
+brew cask install google-chrome firefox sublime-text slack sketch 
+```
 
 ## Oh-my-zsh - Fancy your Terminal
 
@@ -115,7 +102,7 @@ You should see something like this:
 
 ![](images/on-my-zsh.png)
 
-If not, **stop right away** and call a teacher.
+If not, **stop right away** and ask someone.
 
 On Mac, open `Terminal > Preferences` and set the "Pro" theme as default in `Profiles` (*`Réglages`* in French).
 
@@ -128,8 +115,7 @@ Quit and relaunch the Terminal. It should now have a nice black background, more
 
 We need to generate SSH keys which are going to be used by GitHub and Heroku
 to authenticate you. Think of it as a way to log in, but different from the
-well known username/password couple. If you already generated keys
-that you already use with other services, you can skip this step.
+well known username/password couple. 
 
 Open a terminal and type this, replacing the email with **yours** (the
 same one you used to create your GitHub account). It will prompt
@@ -174,13 +160,9 @@ If it does not work, try running this before trying again the `ssh -T` command:
 ssh-add ~/.ssh/id_ed25519
 ```
 
-Don't be in a rush, take time to [read this article](http://sebastien.saunier.me/blog/2015/05/10/github-public-key-authentication.html) to get a better
-understanding of what those keys are used for.
-
-
 ## Dotfiles (Standard configuration)
 
-Hackers love to refine and polish their shell and tools. We'll start with a great default configuration provided by [Le Wagon](http://github.com/lewagon/dotfiles), stored on GitHub. As your configuration is personal, you need your own repository storing it, so you first need to fork it to your GitHub account.
+We'll start with a great default configuration provided by [Le Wagon](http://github.com/lewagon/dotfiles), stored on GitHub. As your configuration is personal, you need your own repository storing it, so you first need to fork it to your GitHub account.
 
 :arrow_right: [Click here to **fork**](https://github.com/lewagon/dotfiles/fork) the `lewagon/dotfiles` repository to your account. Forking means that it will create a new repo in your GitHub account, identical to the original one. You'll have a new repository on your GitHub account, `your_github_username/dotfiles`. We need to fork because each of you will need to put specific information (e.g. your name) in those files.
 
@@ -189,9 +171,6 @@ own github usernickname.
 
 ```bash
 export GITHUB_USERNAME=replace_this_with_your_github_username
-
-# Example:
-#   export GITHUB_USERNAME=ssaunier
 ```
 
 Now copy/paste this very long line in your terminal. Do **not** change this one.
@@ -323,23 +302,7 @@ You should see something starting with `ruby 2.5.3p`. If not, ask a teacher.
 
 ## Installing some gems
 
----
-
-:warning: If you are in **China** :cn:, you should update the way we'll install gem with the following commands. If you are not in China, well just skip this and go directly to the next `gem install` command!
-
-```bash
-# China only!
-gem sources --remove https://rubygems.org/
-gem sources -a https://gems.ruby-china.com/
-gem sources -l
-# *** CURRENT SOURCES ***
-# https://gems.ruby-china.com/
-# Ruby-china.com must be in the list now
-```
-
----
-
-All, please run the following line:
+Please run the following line:
 
 ```bash
 gem install rake bundler rspec rubocop pry pry-byebug hub colored octokit
@@ -377,13 +340,6 @@ postgres=#
 To quit it, type `\q` then `Enter`.
 
 
-## Security
-
-It is mandatory that you protect your session behind a password.If it is not already the case, go to ` > System Preferences > Users & Groups`, and change your account password. You should also go to ` > System Preferences > Security > General`. You should require a password `5 seconds` after sleep or screen saver begins.
-
-You can also go to ` > System Preferences > Mission Control`, and click on the `Hot Corners` button at the bottom left. Choose for the bottom right corner to start the screen saver. That way, when you leave your desk, you can quickly lock you screen by putting your mouse in the bottom right corner. 5 seconds after, your Macbook will be locked and will ask for a password to get back on the session.
-
-
 ## Check-up
 
 Let's check if you successfully installed everything.
@@ -394,7 +350,7 @@ Quit all opened Terminal, open a new one and run the following commands:
 curl -Ls https://raw.githubusercontent.com/lewagon/setup/master/check.rb > _.rb && ruby _.rb || rm _.rb
 ```
 
-It should tell you if your workstation is ready :) If not, ask a teacher.
+It should tell you if your workstation is ready :) If not, ask us.
 
 
 ## Alumni
@@ -411,50 +367,9 @@ Once the teacher has approved your profile, go to your email inbox. You should h
 
 ## Slack
 
-[Download](https://itunes.apple.com/fr/app/slack/id803453959?mt=12) the Slack native app from the mac App Store, and sign in to `lewagon-alumni` organization.
+You should have receive a mail from Slack inviting you to the Poulpe slack. Click on **Join** and fill the information.
 
-Make sure you upload a picture there.
+Make sure you upload a nice black and white picture there.
 
 You can also sign in to Slack on your iPhone or Android device!
-
-The idea is that you'll have Slack open all day, so that you can share useful links / ask for help / decide where to go to lunch / etc.
-
-Enjoy your ride with Le Wagon :)
-
-
-## Keyboard
-
-As you become a programmer, you'll understand that leaving the keyboard takes a lot of time,
-so you'll want to minimize using the trackpad or the mouse. Here are a few tricks on OSX
-to help you do that:
-
-### Keyboard speed
-
-Go to  > System Preferences > Keyboard. Set `Key Repeat` to the fastest position (to the right) and
-`Delay Until Repeat` to the shortest position (to the right).
-
-### Full Keyboard Access
-
-Go to  > System Preferences > Keyboard. Click on the third tab (Shortcuts). At the bottom of the
-pane, click the radio button `All controls`. This way when you get a dialog with several options,
-you'll be able to type `Enter` to confirm, or `Space` to choose the cancel option. If you have more than
-two options, you can use tab to circle between them.
-
-### macOS For hackers
-
-[Read this script](https://github.com/mathiasbynens/dotfiles/blob/master/.macos) and cherry-pick some stuff you think will suit you.
-For instance, you can type in the terminal this one:
-
-```bash
-# Expanding the save panel by default
-defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint -bool true
-defaults write NSGlobalDomain PMPrintingExpandedStateForPrint2 -bool true
-
-# Save screenshots to the Desktop (or elsewhere)
-defaults write com.apple.screencapture location -string "${HOME}/Desktop"
-
-# etc..
-```
-
 
