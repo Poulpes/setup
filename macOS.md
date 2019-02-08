@@ -1,3 +1,6 @@
+Thanks to @[Le Wagon](https://www.lewagon.com) for this nice setup.
+
+
 # Setup instructions
 
 The following instructions will help you to get ready to work @ [Poulpe](http://www.poulpe.co):
