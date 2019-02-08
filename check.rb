@@ -61,7 +61,6 @@ def check_all
       print "> "
       client.password = STDIN.noecho { |stdin| stdin.gets.chomp }
       puts "\nThanks. Asking some infos to GitHub..."
-      # TODO(ssaunier): https://github.com/octokit/octokit.rb#two-factor-authentication
 
       authorization =
         client.authorizations.find { |a| a[:note] == GITHUB_AUTHORIZATION_NOTE } ||
