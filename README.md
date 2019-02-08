@@ -9,5 +9,5 @@
 ### Others
 
 <a href="macOS.md">
-  <img src="images/poulpe.png" alt="Ubuntu" />
+  <img src="images/poulpe.jpg" alt="Poulpe" />
 </a>
